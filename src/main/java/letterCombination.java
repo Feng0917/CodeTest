@@ -12,6 +12,7 @@ public class letterCombination {
         System.out.println(letterCombinations(convertListToString(Arrays.asList(1, 0))));
         System.out.println(letterCombinations(convertListToString(Arrays.asList(2, 3, 1))));
         System.out.println(letterCombinations(convertListToString(Arrays.asList(2, 1, 3))));
+        System.out.println(letterCombinations(convertListToString(Arrays.asList(2, 1, 3, 0))));
     }
 
     private static String[] lettersArr = new String[]{"", "", "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"};
@@ -46,7 +47,7 @@ public class letterCombination {
     private static String convertListToString(List<Integer> integerList) {
         StringBuilder stringBd = new StringBuilder();
         for (Integer d : integerList) {
-            if (d != null && !"".equals(d)) {
+            if (d != null && !"".equals(d+"")) {
                 stringBd.append(d);
             }
         }
